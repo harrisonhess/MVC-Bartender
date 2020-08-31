@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Online Bartender App</h1>
+    <hr />
+    <div>
+        <h3>Drink Menu</h3>
+        <p>View our drink menu here</p>
+        <img src="https://img1.mashed.com/img/gallery/the-best-cheap-mixed-drinks-to-order-at-a-bar/intro-1571943589.jpg" width="500" height="250" />
+        <br /><br />
+        <a asp-action="Menu" class="btn btn-primary">View Drink Menu</a>
+    </div>
+    <hr />
+    <div>
+        <h3>Staff</h3>
+        <p>Access drink order queue here</p>
+        <a href="/Identity/Account/Login" class="btn btn-primary">Staff Login</a>
+    </div>
+</div>
