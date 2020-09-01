@@ -14,11 +14,13 @@ namespace MVC_Bartender.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IDrinkRepo _drinkRepo;
+        private readonly IOrderRepo _orderRepo;
 
-        public HomeController(ILogger<HomeController> logger, IDrinkRepo drinkRepo)
+        public HomeController(ILogger<HomeController> logger, IDrinkRepo drinkRepo, IOrderRepo orderRepo)
         {
             _logger = logger;
             _drinkRepo = drinkRepo;
+            _orderRepo = orderRepo;
         }
 
         public IActionResult Index()
@@ -67,6 +69,17 @@ namespace MVC_Bartender.Controllers
         }
 
         public IActionResult CreateDrink()
+        {
+            return View();
+        }
+
+        public IActionResult OrderDrink(int id)
+        {
+            _orderRepo.addDrink(id);
+            return RedirectToAction("Orders");
+        }
+
+        public IActionResult Orders()
         {
             return View();
         }

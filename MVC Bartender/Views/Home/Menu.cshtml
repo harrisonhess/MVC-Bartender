@@ -37,6 +37,7 @@
                 $ @Html.DisplayFor(modelItem => item.DrinkPrice)
             </td>
             <td>
+                @Html.ActionLink("Add to Order", "OrderDrink", new { id = item.ID }) |
                 @Html.ActionLink("Edit", "EditDrink", new { id = item.ID }) |
                 @Html.ActionLink("Details", "DrinkDetails", new { id = item.ID }) |
                 @Html.ActionLink("Delete", "DeleteDrink", new { id = item.ID })

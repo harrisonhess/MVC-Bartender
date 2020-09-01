@@ -31,6 +31,7 @@ namespace MVC_Bartender
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddSingleton<IDrinkRepo, DrinkRepo>();
+            services.AddSingleton<IOrderRepo, OrderRepo>();
             services.AddSession();
             services.AddMemoryCache();
             services.AddAuthentication();
